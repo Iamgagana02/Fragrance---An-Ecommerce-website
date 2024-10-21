@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<!--Custom-Theme-files-->
+<!--theme-style-->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--start-menu-->
+<script src="{% static 'js/simpleCart.min.js' %}"> </script>
+<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<!--dropdown-->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+
+		.hero{
+    height:8vh;
+    width:100%;
+    background-color:white;
+    background-size:cover;
+    background-position:center;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:2px;
+    padding-left:10%;
+    padding-right:10%;
+}
+.logo{
+    color:#2f3133;
+    font-size:28px;
+
+
+}
+span{
+    color:black;
+}
+nav ul li {
+    list-style-type:none;
+    display:inline-block;
+    padding:10px 20px;}
+nav ul li a{
+    color:#4d4f52;
+    text-decoration:none;
+
+    font-size:18px;}
+
+nav ul li a:hover{
+    color:black;
+    transition:3s;
+}
+
+button{
+    border:none;
+    background:black;
+    padding:12px 30px;
+    border-radius:1px;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    transition:.4s;}
+
+button:hover{
+    transform:scale(1.3);
+    cursor:pointer;}
+
+
+/* a:link, a:visited {
+  transition: color 0.15s ease 0s, border-color 0.15s ease 0s, background-color 0.15s ease 0s;
+} */
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.quantity__minus,
+.quantity__plus {
+  display: block;
+  width: 22px;
+  height: 23px;
+  margin: 0;
+  background: #dee0ee;
+  text-decoration: none;
+  text-align: center;
+  line-height: 23px;
+}
+.quantity__minus:hover,
+.quantity__plus:hover {
+  background: #575b71;
+  color: #fff;
+}
+.quantity__minus {
+  border-radius: 3px 0 0 3px;
+}
+.quantity__plus {
+  border-radius: 0 3px 3px 0;
+}
+.quantity__input {
+  width: 32px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-top: 2px solid #dee0ee;
+  border-bottom: 2px solid #dee0ee;
+  border-left: 1px solid #dee0ee;
+  border-right: 2px solid #dee0ee;
+  background: #fff;
+  color: #8184a1;
+}
+.quantity__minus:link,
+.quantity__plus:link {
+  color: #8184a1;
+}
+.quantity__minus:visited,
+.quantity__plus:visited {
+  color: #fff;
+}
+
+.modal {
+  width: fit-content;
+  height: fit-content;
+  background: #FFFFFF;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 26px;
+  max-width: 450px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.payment--options {
+  width: calc(100% - 40px);
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  gap: 20px;
+  padding: 10px;
+}
+
+.payment--options button {
+  height: 55px;
+  background: #F2F2F2;
+  border-radius: 11px;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+.payment--options button svg {
+  height: 18px;
+}
+
+.payment--options button:last-child svg {
+  height: 22px;
+}
+
+.separator {
+  width: calc(100% - 20px);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  color: #8B8E98;
+  margin: 0 10px;
+}
+
+.separator > p {
+  word-break: keep-all;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  margin: auto;
+}
+
+.separator .line {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: #e8e8e8;
+  margin: auto;
+}
+
+.credit-card-info--form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+.input_container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 15px;
+}
+
+.split input {
+  width: 100%;
+}
+
+.input_label {
+  font-size: 10px;
+  color: #8B8E98;
+  font-weight: 600;
+}
+
+.input_field {
+  width: auto;
+  height: 40px;
+  padding: 0 0 0 16px;
+  border-radius: 9px;
+  outline: none;
+  background-color: #F2F2F2;
+  border: 1px solid #e5e5e500;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 2px #242424;
+  background-color: transparent;
+}
+
+.purchase--btn {
+  height: 55px;
+  background: #F2F2F2;
+  border-radius: 11px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #363636 0%, #1B1B1B 50%, #000000 100%);
+  box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.purchase--btn:hover {
+  box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
+}
+
+/* Reset input number styles */
+.input_field::-webkit-outer-spin-button,
+.input_field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input_field[type=number] {
+  -moz-appearance: textfield;
+}
+.project-info-box p {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d5dadb;
+}
+tr,input,label{
+    font-family: "Barlow", sans-serif !important;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #black;
+    letter-spacing: 0.02rem;
+    margin-bottom: 5px;
+}
+
+.project-info-box {
+  margin: 15px 0;
+  background-color: transparent;
+  padding: 30px 40px;
+  border-radius: 5px;
+  height:200px;width:500px;
+}
+
+.project-info-box tr {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+
+.project-info-box p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+button{
+    border:none;
+    background:black;
+    padding:12px 30px;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    transition:.4s;}
+
+button:hover{
+    transform:scale(1.3);
+    cursor:pointer;}
+
+
+.footer {
+    background:black;
+	padding-bottom: 50px;
+	padding-top: 80px;
+}
+.footer_menu {
+	margin-bottom: 20px;
+}
+.footer_menu ul {
+	list-style: none;
+	text-align: center;
+}
+.footer_menu ul li{display: inline-block;}
+.footer_menu ul li a {
+	color:#fff;
+	padding: 0 10px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.footer_menu ul li a:hover{color:#554c86;}
+
+/*START FOOTER SOCIAL DESIGN*/
+.footer_profile{margin-bottom:40px;}
+.footer_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+.footer_profile ul li{
+display: inline-block;
+}
+@media only screen and (max-width:480px) {
+.footer_profile ul li{margin:2px;}
+}
+.footer_profile ul li a img{width:60px;}
+
+.footer_profile ul li a {
+	background: #c29958;
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 50%;
+	line-height: 40px;
+	box-sizing: border-box;
+	text-decoration: none;
+	-webkit-transition: .3s;
+	transition: .3s;
+	color: #fff;
+}
+.footer_copyright {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+</style>
+
+</head>
+<script>
+    $(document).ready(function() {
+  const minus = $('.quantity__minus');
+  const plus = $('.quantity__plus');
+  const input = $('.quantity__input');
+  minus.click(function(e) {
+    e.preventDefault();
+    var value = input.val();
+    if (value > 1) {
+      value--;
+    }
+    input.val(value);
+  });
+
+  plus.click(function(e) {
+    e.preventDefault();
+    var value = input.val();
+    value++;
+    input.val(value);
+  })
+});
+</script>
+<header>
+
+			<h2 style="padding-left:70%;" class="logo"><span>FRAGRANCES</span><img src="{% static 'image/icons8-perfume.gif' %} "></h2>
+    <div >
+      <div class="container" >
+        <div class="row">
+          <div class="col-md-12 mb-0" style="font-size:17px;">
+            <a href="../">Home</a> <span class="mx-2 mb-0">/</span>
+            <strong class="text-black">Cart</strong>
+          </div>
+            	{% if messages %}
+	<div class="container" style="width:300px;padding-top:2%;">
+	  {% for message in messages %}
+	  <div class="alert alert-success alert-dismissible messages">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		{{ message }}
+	  </div>
+	  {% endfor %}
+	</div>
+	{% endif %}
+
+<!-- //message -->
+        </div>
+      </div>
+    </div>
+</header>
+<body><br><br>
+<div class="container-fluid" style="padding-right:10%;padding-left:3%;">
+
+<!--    <div class="row">-->
+        <div class="col-sm-7">
+            {% for j,i in cl.items %}
+            <div class="card mb-3" style="max-width: 840px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="{{j.image.url}}" width="150" height="180" alt="" style="padding-top:25%;padding-left:15%;">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body" style="font-size:16px;">
+                    <h5 class="card-title"style="font-size:18px;">{{j.name}}</h5><span>
+                      <a style="padding-left:90%;padding-top:5px;" href="delete_c/{{i.1}}">&#10005;</a> </span>
+                    <p class="card-text">{{j.fragrance}}</p>
+                    <p class="card-text">{{j.price}}</p>
+
+                            <div class="input-group mb-3" style="max-width: 80px;">
+                                <div class="input-group-prepend" >
+                                    <a href="#" class="btn btn-outline-primary" style="font-size: 14px;" onclick="return decrementQuantity({{ i.0 }}, '{{ i.1 }}')">&minus;</a>
+
+                                </div>
+
+                                <input  type="text" class="form-control text-center" value="{{i.0}}" placeholder=""
+                                  aria-label="Example text with button addon" aria-describedby="button-addon1" disabled style="font-size: 15px;" max="{{ j.quantity }}">
+                                    <h1></h1>
+                                <div class="input-group-append">
+                                  <a href="inc/{{i.1}}" class="btn btn-outline-primary" style="font-size: 14px;">&plus;</a>
+                                </div>
+
+                            </div>
+                                <span><p class="card-text"><h3 class="text-body-secondary">{{i.2}}</h3> </p></span>
+                    <p class="card-text"><h6 class="text-body-secondary"><b>14 days</b> return avaliable</h6></p>
+                  </div>
+                </div>
+              </div>
+            </div>{% endfor %}
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+            <table class="project-info-box mb-10" >
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                {% for product, details in sub.items %}
+                    <tr>
+                        <td>{{ product.name }}</td> <!-- Assuming 'name' is the attribute of product you want to display -->
+                        <td>{{ details.0 }}</td>    <!-- Accessing the first element (quantity) -->
+                        <td>{{ product.price }}</td>    <!-- Accessing the second element (primary key) -->
+                        <td>{{ details.2|floatformat:2 }}</td> <!-- Accessing the third element (total price) and formatting as float with 2 decimal places -->
+                    </tr>
+                {% endfor %}
+
+                <tr>
+                    <th>Total Price:</th>
+                    <th></th>
+                    <th></th>
+                    <th style="color:green;">{{total|floatformat:2}}</th>
+                </tr>
+
+
+            </table></div>
+            <a style="padding-left:31%;" href="../r8/{{ii}}"><button>Check-out</button></a>
+
+        </div>
+
+<!--    </div>-->
+
+</div>
+
+<script>
+    function decrementQuantity(quantity, itemId) {
+        if (quantity <= 1) {
+            if (!confirm("This item has a quantity of 1. Are you sure you want to remove it from the cart?")) {
+                return false; // User canceled, prevent the default behavior of the link
+            }
+        }
+        // If the user confirms or the quantity is greater than 1, allow the default behavior of the link (decrement)
+        window.location.href = "dec/{{i.1}}" + itemId; // Redirect to the decrement URL for the specific item
+        return true;
+    }
+
+
+</script>
+<br><br><br><br><br><br><br><br>
+
+<div class="footer">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-lg-12 col-sm-12 col-xs-12">
+				<div class="footer_menu">
+					<ul>
+						<li><a href="../">Home</a></li>
+						<li><a href="../women">women</a></li>
+						<li><a href="../men">men</a></li>
+						<li><a href="../unisex">Unisex</a></li>
+						<li><a href="../contact">Discovery</a></li>
+					</ul>
+				</div>
+				<div class="footer_copyright">
+					<p>© 2021 Sai. All Rights Reserved.</p>
+				</div>
+				<div class="footer_profile">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+					</ul>
+				</div>
+			</div><!--- END COL -->
+		</div><!--- END ROW -->
+	</div><!--- END CONTAINER -->
+</div>
+</body>
+</html>

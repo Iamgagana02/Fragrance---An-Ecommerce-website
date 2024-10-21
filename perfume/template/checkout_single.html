@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<script src="{% static 'js/checkouts.js' %}"></script>
+<!--Custom-Theme-files-->
+<!--theme-style-->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+<!--theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--start-menu-->
+<script src="{% static 'js/simpleCart.min.js' %}"> </script>
+<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" >
+<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<!--dropdown-->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+	<style>
+
+
+
+.cards {
+  width: 400px;
+  background: #FFFFFF;
+
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-bottom: 1px solid #efeff3;
+  font-weight: 700;
+  font-size: 11px;
+  color: #63656b;
+}
+
+/* cart */
+.cart {
+  border-radius: 19px 19px 7px 7px;
+}
+
+.cart .products {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height:150px;
+}
+
+.cart .products .product {
+  display: grid;
+  grid-template-columns: 60px 6fr 80px 20px;
+  gap: 5px;
+
+}
+
+.cart .products .product span {
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cart .products .product p {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7a7c81;
+
+}
+
+.cart .quantity {
+  height: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 7px;
+  filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+
+}
+
+.cart .quantity label {
+  width: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #47484b;
+}
+
+.cart .quantity button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  padding-bottom: 2px;
+}
+
+.cards .small {
+  font-size: 15px;
+  margin: 0 0 auto auto;
+}
+
+.cards .small sup {
+  font-size: px;
+}
+
+/* coupons */
+.coupons {
+  border-radius: 7px;
+}
+
+.coupons form {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.input_field {
+  width: auto;
+  height: 36px;
+  padding: 0 0 0 12px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 2px #242424;
+  background-color: transparent;
+}
+
+.coupons form button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 10px;
+  width: 100%;
+  height: 36px;
+  background: linear-gradient(180deg, #4480FF 0%, #115DFC 50%, #0550ED 100%);
+  box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+  border-radius: 5px;
+  border: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+
+}
+
+/* Checkout */
+.checkout {
+  border-radius: 9px 9px 19px 19px;
+
+}
+
+.checkout .details {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 10px;
+  gap: 5px;
+}
+
+.checkout .details span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.checkout .details span:nth-child(odd) {
+  font-size: 11px;
+  font-weight: 700;
+  color: #707175;
+  margin: auto auto auto 0;
+}
+
+.checkout .details span:nth-child(even) {
+  font-size: 13px;
+  font-weight: 600;
+  color: #47484b;
+  margin: auto 0 auto auto;
+}
+
+.checkout .checkout--footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 20px;
+  background-color: #efeff3;
+
+}
+
+.price {
+  position: relative;
+  font-size: 22px;
+  color: #2B2B2F;
+  font-weight: 900;
+}
+
+.price sup {
+  font-size: 13px;
+}
+
+.price sub {
+  width: fit-content;
+  position: absolute;
+  font-size: 11px;
+  color: #5F5D6B;
+  bottom: 5px;
+  display: inline-block;
+
+}
+
+.checkout .checkout-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 36px;
+  background: #3F2404 ;
+  box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+  border-radius: 7px;
+
+
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+b{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+
+
+# normal navbar
+
+		.hero{
+    height:8vh;
+    width:100%;
+    background-color:white;
+    background-size:cover;
+    background-position:center;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:2px;
+    padding-left:10%;
+    padding-right:10%;
+}
+.logo{
+    color:#2f3133;
+    font-size:28px;
+}
+span{
+    color:black;
+}
+nav ul li {
+    list-style-type:none;
+    display:inline-block;
+    padding:10px 20px;}
+nav ul li a{
+    color:#4d4f52;
+    text-decoration:none;
+
+    font-size:18px;}
+
+nav ul li a:hover{
+    color:black;
+    transition:3s;
+}
+
+
+
+
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --color-gray: #737888;
+  --color-lighter-gray: #e3e5ed;
+  --color-light-gray: #f7f7fa;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--color-gray);
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-light-gray);
+  border: 0;
+  margin: 2rem 0;
+}
+
+
+
+.form {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-lighter-gray);
+  padding: .5rem;
+  border-radius: .25rem;
+}
+
+.field__label {
+  color: var(--color-gray);
+  font-size: 0.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem
+}
+
+.field__input {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+}
+.field:focus-within {
+  border-color: #000;
+}
+
+.fields {
+  display: grid;
+  grid-gap: 1rem;
+}
+.fields--2 {
+  grid-template-columns: 1fr 1fr;
+}
+.fields--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.ca {
+  width: 750px;
+  height: 454px;
+  border-radius: 25px;
+  background: white;
+  color:#735237;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+}
+body{margin-top:20px;}
+.footer {
+    background:black;
+	padding-bottom: 50px;
+	padding-top: 80px;
+}
+.footer_menu {
+	margin-bottom: 20px;
+}
+.footer_menu ul {
+	list-style: none;
+	text-align: center;
+}
+.footer_menu ul li{display: inline-block;}
+.footer_menu ul li a {
+	color:#fff;
+	padding: 0 10px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.footer_menu ul li a:hover{color:#554c86;}
+
+/*START FOOTER SOCIAL DESIGN*/
+.footer_profile{margin-bottom:40px;}
+.footer_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+.footer_profile ul li{
+display: inline-block;
+}
+@media only screen and (max-width:480px) {
+.footer_profile ul li{margin:2px;}
+}
+.footer_profile ul li a img{width:60px;}
+
+.footer_profile ul li a {
+	background: #c29958;
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 50%;
+	line-height: 40px;
+	box-sizing: border-box;
+	text-decoration: none;
+	-webkit-transition: .3s;
+	transition: .3s;
+	color: #fff;
+}
+.footer_copyright {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+	</style>
+
+</head>
+<body>
+
+<header>
+	<div class="hero">
+		<nav>
+
+			<h2 class="logo"><span>FRAGRANCES</span><img src="{% static 'image/icons8-perfume.gif' %} "></h2>
+			<ul>
+				<li><a href="#"></a> </li>
+				<li><a href="#"></a> </li>
+				<li><a href="#"></a> </li>
+				<li><a href="#"></a> </li>
+				<li><a href="#"></a> </li>
+				<li><a href="#"></a> </li>
+			</ul>
+<!--			<a href="log"><button type="button">Login </button></a>-->
+		</nav>
+        <br>
+<!--        <a style="padding-left:6%;" href="">Back</a>-->
+<!--        <h1 style="padding-left:45%;color:#c29977;font-size:27px;">CHECK-OUT</h1>-->
+	</div>
+
+</header>
+          <div class="col-md-12 mb-0" style="font-size:17px;padding-left:13%;">
+            <a href="../">Home</a> <span class="mx-2 mb-0">/</span>
+            <strong class="text-black">Checkout</strong>
+          </div>
+<br><br>
+
+
+
+
+{% if messages %}
+<div class="container">
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissible messages">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+
+<div class="container-fluid">
+    <div class="row">
+    <form action="../place-order2" method="post" style="padding-left:5%;padding-right:5%;">
+        {% csrf_token %}
+        <div class="col-sm-8">
+            <div class="ca">
+                <br>
+
+                <h3><center>DELIVERY ADDRESS</center></h3>
+                <br><br>
+                {% if pr %}
+
+                <div class="fields fields--2">
+                    <label class="field">
+                        <span class="field__label" >Name </span>
+                        <input class="field__input" type="text"  value="{{pr.user_det.name}}" name="name"/>
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Email</span>
+                        <input class="field__input" type="text"  value="{{pr.user_det.email}}" name="email" disabled/>
+                    </label>
+                </div>
+                    <label class="field">
+                        <span class="field__label">Address</span>
+                        <input class="field__input" type="text" name="address" value="{{pr.address}}" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label">state</span>
+                        <input class="field__input" type="text" name="state" value="{{pr.state}}" />
+
+                    </label>
+                <div class="fields fields--3">
+                        <label class="field">
+                            <span class="field__label">Pincode</span>
+                            <input class="field__input" type="number" name="pincode" value="{{pr.pincode}}" />
+                        </label>
+
+                        <label class="field">
+                            <span class="field__label" >District</span>
+                                <input class="field__input" type="text" name="district" value="{{pr.district}}">
+                        </label>
+                        <label class="field">
+                            <span class="field__label" >Phone</span>
+                                <input class="field__input" type="number" name="phone" value="{{pr.phone}}" >
+                        </label>
+                </div>
+                {% else %}
+                <div class="fields fields--2">
+                    <label class="field">
+                        <span class="field__label" >Name </span>
+                        <input  class="field__input" type="text"  value="{{data.name}}" name="name" required/>
+
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Email</span>
+                        <input class="field__input" type="text"  value="{{data.email}}" name="email" disabled/>
+                    </label>
+                </div>
+                        <label class="field">
+                            <span class="field__label">Address</span>
+                            <input id="input1" oninput="addInputBox(1,this.value)" class="field__input" type="text" name="address" required/>
+                        </label>
+                        <label class="field">
+                            <span class="field__label">state</span>
+                            <input id="input2" oninput="addInputBox(2,this.value)"class="field__input" type="text" name="state" required/>
+
+                        </label>
+                <div class="fields fields--3">
+                    <label class="field">
+                        <span class="field__label">Pincode</span>
+                        <input id="input3" oninput="addInputBox(3,this.value)" class="field__input" type="number" name="pincode" required/>
+                    </label>
+
+                    <label class="field">
+                        <span class="field__label" >District</span>
+                            <input id="input4" oninput="addInputBox(4,this.value)" class="field__input" type="text" name="district" required>
+                    </label>
+                    <label class="field">
+                        <span class="field__label" >Phone</span>
+                            <input id="input5" oninput="addInputBox(5,this.value)" class="field__input" type="number" name="phone" required >
+                    </label>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+<script>
+    function addInputBox(inputId,inputValue) {
+        document.getElementById('output'+ inputId).value=inputValue;
+    }
+</script>
+
+
+		<div class="col-sm-4">
+<!--            <div class="master-container">-->
+              <div class="cards cart">
+                <label class="title">Your cart</label>
+                <div class="products">
+                  <div class="product">
+                    <div style="padding-left:30%;"><img src="{{pdata.image.url}}" width="90px" height="90px"> </div>
+                    <div style="padding-left:45%;">
+                      <span>{{pdata.name}} Perfumes</span>
+                      <p>For {{pdata.category}}</p>
+                      <span>
+                            Qty: <input type="number" id="inputBox"  value="{{ myq }}"  style="width: 40px;"  disabled >
+
+
+<!--                            Qty: <input type="number" id="inputBox" name="singleqty" value="1" oninput="multiplyByQty()" max="10" min="1" style="width: 40px;">-->
+<!--                             <p style="color:red;" id="maxLimitMessage"></p>-->
+<!--                            <script>-->
+<!--                            function multiplyByQty() {-->
+<!--                                var input = document.getElementById("inputBox").value;-->
+<!--                                var price = {{ pdata.price }};-->
+<!--                                var result = input * price;-->
+<!--                                document.getElementById("result").value = result;-->
+<!--                                document.getElementById("res1").value = result;-->
+<!--                                document.getElementById("res2").value = result;-->
+<!--                                if (input >= 10) {-->
+<!--                                    document.getElementById("maxLimitMessage").innerText = "Maximum quantity is 10";-->
+<!--                                } else {-->
+<!--                                    document.getElementById("maxLimitMessage").innerText = "";-->
+<!--                                }-->
+<!--                            }-->
+<!--                            </script>-->
+                      </span>
+                  </div>
+                    <label class="price small">{{ pdata.price }}</label>
+                      <input hidden="" name="tprice" value="{{pdata.price}}">
+
+<!--                    <label class="price small">{{pre.b_qty}}</label><br>-->
+<!--                    <label class="price small">{{pre.b_tprice}}</label>-->
+                  </div>
+                </div>
+              </div>
+              <div class="cards checkout">
+                <label class="title">Checkout</label>
+                <div class="details">
+                  <span>Shipping charge:</span>
+                  <span>Free</span>
+
+                </div>
+                <div class="checkout--footer">
+                  <label class="price" id="res2">
+                        <b>₹<input type="number" id="result" name="total_l" value="{{ my }}" readonly style="width: 70px; height: 30px;border: none;
+                                    border-radius: 0;
+                                    outline: none;
+                                    appearance: none;
+                                    font-size: 15px;
+                                    appearance: none;
+                                    color: rgb(178, 26, 26);" ></b>
+                  </label>
+                </div>
+                   <label class="title">Payment</label>
+<!--                <div style="padding-left:30%;">-->
+<!--                  <button   class="checkout-btn">Cash on delivery</button><br>-->
+<!--                  <input type="submit" value="pay with razorpay">-->
+<!--                  <a href="../success">Pay with Razorpay</a>-->
+<!--              </div>-->
+                  <input type="hidden" value="COD" name="payment_mode">
+                  <input type="hidden" value="NOT PAID" name="payment_id">
+                  <div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">CASH ON DELIVERY</button>
+
+                  </div>
+              </div>
+<!--            </div>-->
+		</div>
+    </form>
+
+        <form action="../single_payment" method="post">
+                          {% csrf_token %}
+                          {% if pr %}
+                              <input hidden="hidden" class="field__input" type="text"  value="{{pr.user_det.name}}" name="name"/>
+                              <input hidden="hidden" class="field__input" type="number"  value="{{pr.phone}}" name="phone"/>
+                              <input hidden="hidden" class="field__input" type="email"  value="{{pr.user_det.email}}" name="email"/>
+                              <input hidden="hidden" class="field__input" type="text"  value="{{pr.address}}" name="address"/>
+                              <input hidden="hidden" class="field__input" type="text"  value="{{pr.state}}" name="state"/>
+                              <input hidden="hidden" class="field__input" type="text"  value="{{pr.district}}" name="district"/>
+                              <input hidden="hidden" class="field__input" type="number"  value="{{pr.pincode}}" name="pincode"/>
+                              <input hidden="hidden" type="hidden" value="Razorpay" name="payment_mode">
+                              <input type="hidden" value="PAID" name="payment_id">
+
+                          {% else %}
+                              <input hidden="hidden" class="field__input" type="text"   name="name" value="{{data.name}}" required/>
+                              <input hidden="hidden" id="output5"  class="field__input" type="number"   name="phone"/>
+                              <input hidden="hidden" class="field__input" type="email"   name="email" value="{{data.email}}" required/>
+                              <input hidden="hidden" id="output1"  class="field__input" type="text"   name="address" required/>
+                              <input hidden="hidden" id="output2"  class="field__input" type="text"   name="state" required/>
+                              <input hidden="hidden" id="output4"  class="field__input" type="text"   name="district" required/>
+                              <input hidden="hidden" id="output3"  class="field__input" type="number"   name="pincode" required/>
+                              <input hidden="hidden" type="hidden" value="Razorpay" name="payment_mode">
+                              <input type="hidden" value="PAID" name="payment_id">
+
+
+                          {% endif %}
+
+
+                                <div style="position:relative;left:225%;bottom:40%;">
+                                    <button type="submit" style="width:399px;"class="btn btn-primary btn-lg btn-block" >ONLINE - PAYMENT - MODE </button>
+                                </div>
+
+                      </form>
+    </div>
+</div>
+
+<br><br>
+
+
+<br><center><h5 style="color:red;"> Notes: Cancel option is not available  for Razor-pay payment, You can cancel your order while delivering.</h5></center>
+<br><br>
+
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<div class="footer">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-lg-12 col-sm-12 col-xs-12">
+				<div class="footer_menu">
+					<ul>
+						<li><a href="../">Home</a></li>
+						<li><a href="../women">women</a></li>
+						<li><a href="../men">men</a></li>
+						<li><a href="../unisex">Unisex</a></li>
+						<li><a href="../contact">Discovery</a></li>
+					</ul>
+				</div>
+				<div class="footer_copyright">
+					<p>© 2021 Sai. All Rights Reserved.</p>
+				</div>
+				<div class="footer_profile">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+					</ul>
+				</div>
+			</div><!--- END COL -->
+		</div><!--- END ROW -->
+	</div><!--- END CONTAINER -->
+</div>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Checkout</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Checkout</h1>-->
+<!--    <form action="/checkout/" method="post">-->
+<!--        <label for="address">Address:</label>-->
+<!--        <input type="text" id="address" name="address" required>-->
+<!--        <br>-->
+<!--        <input type="radio" id="cash_on_delivery" name="payment_mode" value="cash_on_delivery" checked>-->
+<!--        <label for="cash_on_delivery">Cash on Delivery</label>-->
+<!--        <br>-->
+<!--        <input type="radio" id="razor_pay" name="payment_mode" value="razor_pay">-->
+<!--        <label for="razor_pay">Razor Pay</label>-->
+<!--        <br>-->
+<!--        <button type="submit">Place Order</button>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--{% block scripts %}-->
+<!--<script src="https://checkout.razorpay.com/v1/checkout.js"></script>-->
+<!--{% endblock scripts %}-->
+
+
+<!-- RAZORPAY Checkout -->
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

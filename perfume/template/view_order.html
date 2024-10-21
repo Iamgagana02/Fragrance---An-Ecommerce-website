@@ -1,0 +1,435 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<!--Custom-Theme-files-->
+<!--theme-style-->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--start-menu-->
+<script src="{% static 'js/simpleCart.min.js' %}"> </script>
+<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" >
+<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<!--dropdown-->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+	<style>
+		.hero{
+    height:8vh;
+    width:100%;
+    background-color:white;
+    background-size:cover;
+    background-position:center;
+}
+nav{
+    display:flex;
+    float:left;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:2px;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+.logo{
+    color:#2f3133;
+    font-size:28px;
+
+}
+span{
+    color:black;
+}
+nav ul li {
+    list-style-type:none;
+    display:inline-block;
+    padding:10px 20px;}
+nav ul li a{
+    color:#4d4f52;
+    text-decoration:none;
+
+    font-size:18px;}
+
+nav ul li a:hover{
+    color:black;
+    transition:3s;
+}
+
+button{
+    border:none;
+    background:black;
+    padding:12px 30px;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    transition:.4s;}
+
+button:hover{
+    transform:scale(1.3);
+    cursor:pointer;}
+
+
+.warning {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 320px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #FEF7D1;
+  border: 1px solid #F7C752;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+}
+
+.warning__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.warning__icon path {
+  fill: #F7C752;
+}
+
+.warning__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #755118;
+}
+
+.warning__close {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.warning__close path {
+  fill: #755118;
+}
+
+body{margin-top:20px;}
+.footer {
+    background:black;
+	padding-bottom: 50px;
+	padding-top: 80px;
+}
+.footer_menu {
+	margin-bottom: 20px;
+}
+.footer_menu ul {
+	list-style: none;
+	text-align: center;
+}
+.footer_menu ul li{display: inline-block;}
+.footer_menu ul li a {
+	color:#fff;
+	padding: 0 10px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.footer_menu ul li a:hover{color:#554c86;}
+
+/*START FOOTER SOCIAL DESIGN*/
+.footer_profile{margin-bottom:40px;}
+.footer_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+.footer_profile ul li{
+display: inline-block;
+}
+@media only screen and (max-width:480px) {
+.footer_profile ul li{margin:2px;}
+}
+.footer_profile ul li a img{width:60px;}
+
+.footer_profile ul li a {
+	background: #c29958;
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 50%;
+	line-height: 40px;
+	box-sizing: border-box;
+	text-decoration: none;
+	-webkit-transition: .3s;
+	transition: .3s;
+	color: #fff;
+}
+.footer_copyright {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+</style>
+</head>
+<body>
+<header>
+    	{% if messages %}
+	<div class="container" style="width:300px;padding-top:2%;">
+	  {% for message in messages %}
+	  <div class="alert alert-success alert-dismissible messages">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		{{ message }}
+	  </div>
+	  {% endfor %}
+	</div>
+	{% endif %}
+
+<!-- //message -->
+</header>
+<!--<section class="h-100 gradient-custom">-->
+<!--  <div class="container-fluid py-5 h-100">-->
+<!--    <div class="row d-flex justify-content-center align-items-center h-100">-->
+<!--      <div class="col-sm-11 col-lg-10">-->
+<!--        <div class="card border-0" style="border-radius: 5;">-->
+<!--          <div class="card-header px-4 py-5">-->
+<!--            <h5 class="text-muted mb-0">Thanks for your Order, <span style="color: #c29958;">{{det.name}}</span>!</h5>-->
+<!--          </div>-->
+<!--            {% for i in l%}-->
+<!--              <div class="card-body p-4">-->
+<!--                <div class="d-flex justify-content-between align-items-center mb-4">-->
+<!--                  <p class="lead fw-normal mb-0" style="color: #c29958;">Receipt</p>-->
+<!--                  <p class="small text-muted mb-0">{{i.tracking_no}}</p>-->
+<!--                </div>-->
+
+<!--                <div class="card shadow-0 border mb-4">-->
+<!--                  <div class="card-body">-->
+<!--                    <div class="row">-->
+<!--                      <div class="col-md-1">-->
+<!--                        <img src="{{i.product.image.url}}" width="60px" height="60px"  class="card-img-top" alt="Card image cap">-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 text-center d-flex justify-content-center align-items-center">-->
+<!--                        <p class="text-dark mb-0 large">{{i.nname}}</p>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 text-center d-flex justify-content-center align-items-center">-->
+<!--                        <p class="text-dark mb-0 large">{{i.tracking_no}}</p>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 text-center d-flex justify-content-center align-items-center">-->
+<!--                        <p class="text-dark mb-0 large">Qty: {{i.quant}}</p>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 text-center d-flex justify-content-center align-items-center">-->
+<!--                        <p class="text-dark mb-0 large">{{i.tprice}}</p>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 text-center d-flex justify-content-center align-items-center">-->
+<!--                        <p class="text-dark mb-0 large">{{i.payment_mode}}</p>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-1 text-center d-flex justify-content-center align-items-center">-->
+<!--                        <p class="text-dark mb-0"><a href="../cancel/{{i.id}}"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a> </p>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <hr class="mb-4" style="background-color: #e0e0e0; opacity: 1;">-->
+<!--                    <div class="row d-flex align-items-center">-->
+<!--                      <div class="col-md-2">-->
+<!--                        <p class="text-muted mb-0 small">Track Order</p>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-10">-->
+<!--                        {% if i.status == 'pending' %}-->
+<!--                        <div class="progress" style="height: 12px; border-radius: 16px;">-->
+<!--                            <div class="progress-bar" role="progressbar"-->
+<!--                                style="width: 65%; border-radius: 16px; background-color: #c29958;" aria-valuenow="65"-->
+<!--                                aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                        </div>-->
+<!--                        {% endif %}-->
+
+
+<!--                        <div class="d-flex justify-content-around mb-1">-->
+<!--                          <p class="text-muted mt-1 mb-0 small ms-xl-5">Out for delivary</p>-->
+<!--                          <p class="text-muted mt-1 mb-0 small ms-xl-5">Delivered</p>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--            {% endfor %}-->
+
+
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<div class="container-fluid" style="background-color:black;">
+    <nav>
+        <ul>
+        <li><a href="../" style="color: #c29958;">HOME</a></li>
+        <li ><a href="../myorder" style="color: #c29958;">MY-ORDERS</a></li>
+        </ul>
+    </nav>
+</div>
+<br>
+<br>
+<br>
+<br>
+<!--<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />-->
+<div class="container-fluid" style="padding-left:7%;padding-right:6%;font-size:20px;>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <div class="table-responsive">
+                            <table class="table fs-15 align-middle table-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"style="min-width:170px;">Order ID</th>
+                                        <th scope="col"style="min-width:200px;">Order-items</th>
+                                        <th scope="col"style="min-width:170px;">Payment status</th>
+                                        <th scope="col"style="min-width:200px;">Address</th>
+                                        <th scope="col" style="min-width:100px;">Amount</th>
+                                        <th scope="col" style="min-width:160px;">Order-date</th>
+                                        <th scope="col" style="min-width:160px;">Delivery-Estimation</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for order_dict in orders_list %}
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="text-body">{{ order_dict.order.tracking_no }}</a>
+                                        </td>
+
+                                        <td>
+                                            {% for order_item in order_dict.order_items %}
+                                                <a href="#" class="text-body"> : {{ order_item.product.name }}</a><br>
+                                            {% endfor %}
+                                        </td>
+                                        <td>
+                                            <div class="d-flex gap-2">
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <div class="avatar-title bg-light rounded">
+                                                        <img src="../assets/images/products/img-19.png" alt="" class="avatar-xs">
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <p class="mb-0 text-muted fs-13">{{ order_dict.order.payment_mode }}</p>
+
+                                                        <h4 class="fs-15 mb-1">{{ order_dict.order.payment_id }}</h4>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td >
+                                                <div class="flex-grow-1">
+                                                    <p class="mb-0 text-muted fs-13">{{ order_dict.order.nname }}</p>
+
+                                                        <h4 class="fs-15 mb-1">{{ order_dict.order.saddress }}</h4>
+                                                        <h4 class="fs-15 mb-1">{{ order_dict.order.spincode }},{{ order_dict.order.sdistrict }}</h4>
+                                                        <h4 class="fs-15 mb-1">{{ order_dict.order.sphone }}</h4>
+                                                </div>
+                                        </td>
+                                        <td class="fw-medium">{{ order_dict.order.tprice}}</td>
+                                        <td class="fw-medium">{{ order_dict.order.created_at}}</td>
+                                                                                <td>
+                                            <span>{{ order_dict.order.updated_at }}</span>
+                                        </td>
+                                        <td>
+                                            <span>{{ order_dict.order.status}}</span>
+                                        </td>
+                                        <td>
+                                            {% if order_dict.order.payment_mode == 'COD' %}
+
+<!--                                            <a href="../delete_course/{{i.id}}"><button class="btn btn-delete" onclick="deleteCourse()"><i class="fas fa-trash"></i> Delete Course</button></a>-->
+                                            <a href="../cancel/{{order_dict.order.id}}"  class="btn btn-danger btn-sm" onclick="deleteCourse()">X</a>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+<!--                        <div class="text-end">-->
+<!--                            <button class="btn btn-hover btn-primary">Continue Shopping <i class="ri-arrow-right-line align-middle ms-1"></i></button>-->
+<!--                        </div>-->
+                    </div>
+                </div><!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<br><br><br><br>
+<br><br><br><center><h5 style="color:red;"> Notes: Cancel option is not available through website for Razor-pay payment, You can cancel your order while delivering.</h5></center>
+<center><h5 style="color:red;"> You may please confirm your cancellation status by clicking (cross) X symbol in for your COD cancellation</h5></center><br>
+<br><br>
+<div class="footer">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-lg-12 col-sm-12 col-xs-12">
+				<div class="footer_menu">
+					<ul>
+						<li><a href="../">Home</a></li>
+						<li><a href="../women">women</a></li>
+						<li><a href="../men">men</a></li>
+						<li><a href="../unisex">Unisex</a></li>
+						<li><a href="../contact">Discovery</a></li>
+					</ul>
+				</div>
+				<div class="footer_copyright">
+					<p>© 2021 Sai. All Rights Reserved.</p>
+				</div>
+				<div class="footer_profile">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+					</ul>
+				</div>
+			</div><!--- END COL -->
+		</div><!--- END ROW -->
+	</div><!--- END CONTAINER -->
+</div>
+<script>
+        function deleteCourse() {
+    // Add your delete logic here
+    alert('Are you sure you want to delete the order?');
+            }
+
+        function showEditForm(courseId) {
+    var formId = 'editForm_' + courseId;
+    document.getElementById(formId).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
+
+
+

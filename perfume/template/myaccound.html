@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login Form</title>
+	<style>
+		* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    height: 470px;
+    width: 300px;
+    box-shadow: 0 10px 20px black;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Abel', sans-serif;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    background-image: url('https://xp.io/storage/15pewlWA.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: relative;
+    top: 180px;
+    margin-left: 170px;
+    box-shadow: 0 2px 15px rgb(58, 54, 54);
+    transform: rotate(-20deg);
+}
+
+.shape {
+    height: 250px;
+    width: 400px;
+    background-color: black;
+    margin-left: -20px;
+    position: relative;
+    top: -89px;
+    box-shadow: 0 2px 15px black;
+    transform: rotate(25deg);
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    color: rgb(105, 100, 109);
+}
+
+p {
+    padding-left: 30px;
+    padding-top: 2px;
+    padding-right: 30px;
+    color: rgb(105, 100, 109);
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons i {
+    margin-left: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+    color: rgb(40, 163, 194);
+    ;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+    color: rgb(18, 192, 235);
+}
+	</style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="shape">
+            <div class="image"></div>
+        </div>
+
+
+        <h3> {{mydet.name}}</h3>
+        <p> {{mydet.email}} </p><br>
+        <p>view & edit profile <span><a href="profcreate/{{mydet.id}}"> <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit" ></i></a></span></p>
+            <br>
+            <br>
+        <p>FRAGRANCE PERFUMES LMT</p>
+        <div class="icons">
+<!--        <a href="https://www.google.com"><i class="fa fa-google" aria-hidden="true"></i></a>-->
+        <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.pinterest.com"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+        <a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

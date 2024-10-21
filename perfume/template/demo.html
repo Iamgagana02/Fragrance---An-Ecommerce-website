@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<!--Custom-Theme-files-->
+<!--theme-style-->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--start-menu-->
+<script src="{% static 'js/simpleCart.min.js' %}"> </script>
+<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<!--dropdown-->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+    <form action='../sbook/{{pdata.id}}' method="post" style="padding-left:5%;padding-right:5%;">
+        {% csrf_token %}
+        <div class="col-sm-8">
+            <div class="ca">
+                <br>
+                <h3><center>DELIVERY ADDRESS</center></h3>
+                <br><br>
+                {% if pr %}
+
+                <div class="fields fields--2">
+                    <label class="field">
+                        <span class="field__label" >Name </span>
+                        <input class="field__input" type="text"  value="{{pr.user_det.name}}" name="name"/>
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Email</span>
+                        <input class="field__input" type="text"  value="{{pr.user_det.email}}" name="email" disabled/>
+                    </label>
+                </div>
+                    <label class="field">
+                        <span class="field__label">Address</span>
+                        <input class="field__input" type="text" name="address" value="{{pr.address}}" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label">state</span>
+                        <input class="field__input" type="text" name="state" value="{{pr.state}}" />
+
+                    </label>
+                    <div class="fields fields--3">
+                        <label class="field">
+                            <span class="field__label">Pincode</span>
+                            <input class="field__input" type="number" name="pincode" value="{{pr.pincode}}" />
+                        </label>
+
+                        <label class="field">
+                            <span class="field__label" >District</span>
+                                <input class="field__input" type="text" name="district" value="{{pr.district}}">
+                        </label>
+                        <label class="field">
+                            <span class="field__label" >Phone</span>
+                                <input class="field__input" type="number" name="phone" value="{{pr.phone}}" >
+                        </label>
+                    </div>
+                {% else %}
+                    <div class="fields fields--2">
+                        <label class="field">
+                            <span class="field__label" >Name </span>
+                            <input class="field__input" type="text"  value="{{data.name}}" name="name" required/>
+                        </label>
+                        <label class="field">
+                            <span class="field__label">Email</span>
+                            <input class="field__input" type="text"  value="{{data.email}}" name="email" disabled/>
+                        </label>
+                    </div>
+                        <label class="field">
+                            <span class="field__label">Address</span>
+                            <input class="field__input" type="text" name="address" required/>
+                        </label>
+                        <label class="field">
+                            <span class="field__label">state</span>
+                            <input class="field__input" type="text" name="state" required/>
+
+                        </label>
+                        <div class="fields fields--3">
+                            <label class="field">
+                                <span class="field__label">Pincode</span>
+                                <input class="field__input" type="number" name="pincode" required/>
+                            </label>
+
+                            <label class="field">
+                                <span class="field__label" >District</span>
+                                    <input class="field__input" type="text" name="district" required>
+                            </label>
+                            <label class="field">
+                                <span class="field__label" >Phone</span>
+                                    <input class="field__input" type="number" name="phone" required >
+                            </label>
+                        </div>
+                {% endif %}
+            </div>
+        </div>
+
+		<div class="col-sm-4">
+<!--            <div class="master-container">-->
+              <div class="cards cart">
+                <label class="title">Your cart</label>
+                <div class="products">
+                  <div class="product">
+                    <div style="padding-left:30%;"><img src="{{pdata.image.url}}" width="90px" height="90px"> </div>
+                    <div style="padding-left:45%;">
+                      <span>{{pdata.name}} Perfumes</span>
+                      <p>For {{pdata.category}}</p>
+                      <span>
+                            Qty: <input type="number" id="inputBox" name="singleqty" value="1" oninput="multiplyByQty()" max="10" min="1" style="width: 40px;">
+                             <p style="color:red;" id="maxLimitMessage"></p>
+
+
+                            <script>
+                            function multiplyByQty() {
+                                var input = document.getElementById("inputBox").value;
+                                var price = {{ pdata.price }};
+                                var result = input * price;
+                                document.getElementById("result").value = result;
+                                document.getElementById("res1").value = result;
+                                document.getElementById("res2").value = result;
+                                if (input >= 10) {
+                                    document.getElementById("maxLimitMessage").innerText = "Maximum quantity is 10";
+                                } else {
+                                    document.getElementById("maxLimitMessage").innerText = "";
+                                }
+                            }
+                            </script>
+                      </span>
+                    </div>
+                    <label class="price small">{{ pdata.price }}</label>
+
+<!--                    <label class="price small">{{pre.b_qty}}</label><br>-->
+<!--                    <label class="price small">{{pre.b_tprice}}</label>-->
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="cards checkout">
+                <label class="title">Checkout</label>
+                <div class="details">
+                  <span>Shipping charge:</span>
+                  <span>Free</span>
+
+                </div>
+                <div class="checkout--footer">
+                  <label class="price" id="res2">
+                        <b>₹<input type="number" id="result" name="total_l" value="{{ pdata.price }}" readonly style="width: 70px; height: 30px;border: none;
+                                    border-radius: 0;
+                                    outline: none;
+                                    appearance: none;
+                                    font-size: 15px;
+                                    appearance: none;
+                                    color: rgb(178, 26, 26);" ></b>
+
+                  </label>
+                </div>
+                   <label class="title">Payment</label>
+<!--                <div style="padding-left:30%;">-->
+                    <button id="cashOnDeliveryBtn" class="checkout-btn">Cash on delivery</button><br>
+                    <button id="razorpayBtn" class="checkout-btn">Pay with razorpay</button>
+<!--                  <a href="../success">Pay with Razorpay</a>-->
+<!--              </div>-->
+              </div>
+<!--            </div>-->
+		</div>
+    </form>
+
+
+<!--#________________________________________________________________________________________________________________________________-->
+    <div class="container">
+        <form action="../sbook/{{pdata.id}}" method="post" style="padding-left:5%;padding-right:5%;">
+            {% csrf_token %}
+            <div class="col-sm-8">
+                <div class="ca">
+                    <br>
+                    <h3><center>DELIVERY ADDRESS</center></h3>
+                    <br><br>
+                    <!-- Your form fields here -->
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="cards cart">
+                    <label class="title">Your cart</label>
+                    <!-- Your cart details here -->
+                </div>
+
+                <div class="cards checkout">
+                    <label class="title">Checkout</label>
+                    <!-- Checkout details here -->
+                    <label class="title">Payment</label>
+<!--                    <button id="cashOnDeliveryBtn" class="checkout-btn">Cash on delivery</button><br>-->
+<!--                    <button id="razorpayBtn" class="checkout-btn">Pay with razorpay</button>-->
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to handle form submission for the "Cash on delivery" button
+            document.getElementById("cashOnDeliveryBtn").addEventListener("click", function(event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+                // Submit the form
+                document.querySelector("form").submit();
+            });
+
+            // Function to handle form submission for the "Pay with razorpay" button
+            document.getElementById("razorpayBtn").addEventListener("click", function(event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+                // Send an AJAX request to the payments endpoint
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/payments", true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        // Redirect to the payment page after receiving the response
+                        window.location.href = "/payments";
+                    }
+                };
+                xhr.send();
+            });
+        });
+    </script>
+
+<!--    <script>-->
+<!--        document.addEventListener("DOMContentLoaded", function() {-->
+<!--            // Function to handle form submission for the "Cash on delivery" button-->
+<!--            document.getElementById("cashOnDeliveryBtn").addEventListener("click", function(event) {-->
+<!--                // Perform any necessary actions before form submission for Cash on delivery-->
+<!--                // For example, you can redirect to another function here-->
+<!--                // Then, prevent the default form submission behavior-->
+<!--                event.preventDefault();-->
+<!--                // Perform redirection or any other action here-->
+<!--                // Once done, you can submit the form-->
+<!--                document.querySelector("form").submit();-->
+<!--            });-->
+
+<!--            // Function to handle form submission for the "Pay with razorpay" button-->
+<!--            document.getElementById("razorpayBtn").addEventListener("click", function(event) {-->
+<!--                // Perform any necessary actions before form submission for Razorpay-->
+<!--                // For example, you can redirect to another function here-->
+<!--                // Then, prevent the default form submission behavior-->
+<!--                event.preventDefault();-->
+<!--                // Perform redirection or any other action here-->
+<!--                // Once done, you can submit the form-->
+<!--                document.querySelector("form").submit();-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+</body>
+</html>

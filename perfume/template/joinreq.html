@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #996633;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+
+    }
+    li {
+      display: block;
+    }
+    .col {
+
+      flex-basis: 100%;
+
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+table {
+    width: 100%; /* Make table fill its container */
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+/* Set width for specific columns */
+th:nth-child(1), td:nth-child(1) {
+    width: 100px; /* Adjust to your desired width */
+}
+th:nth-child(2), td:nth-child(2) {
+    width: 200px; /* Adjust to your desired width */
+}
+/* Add more nth-child selectors for additional columns */
+
+
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #EEE;
+  box-sizing: border-box;
+
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+		<p><h2 style="  position: absolute;top: 30px;font-size: 36px;color: #818181;margin-left: 50px;">Admin</h2></p>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br><br><br>
+  <a href="s">Products</a>
+  <a href="use">User details</a>
+  <a href="#">Customers</a>
+  <a href="#">Payments</a>
+  <a href="joi">Employee</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<!--<div class="container-fluid" style="padding-left:8%;padding-right:10%;">-->
+<!--  <br><br>-->
+<!--  <h2>DELIVERY-BOYS DETAILS</h2>-->
+<!--  <br><br>-->
+<!--  <ul class="responsive-table">-->
+<!--    <li class="table-header">-->
+<!--      <div class="col col-1">Name</div>-->
+<!--      <div class="col col-1">Image</div>-->
+<!--      <div class="col col-1">E-mail</div>-->
+<!--      <div class="col col-1">License</div>-->
+<!--      <div class="col col-1">Biodata</div>-->
+<!--      <div class="col col-1">Location</div>-->
+<!--      <div class="col col-1">Phone</div>-->
+<!--      <div class="col col-1">A/C</div>-->
+<!--      <div class="col col-1">User Name</div>-->
+<!--      <div class="col col-1">Password</div>-->
+<!--      <div class="col col-2">Accept Or Reject </div>-->
+<!--    </li>-->
+<!--    {% for i in data %}-->
+<!--    <li class="table-row">-->
+<!--      <div class="col col-1">{{i.name}}</div>-->
+<!--      <div class="col col-1"><img src="{{i.photo.url}}" width="100px" height="100px"></div>-->
+<!--      <div class="col col-1">{{i.email}}</div>-->
+<!--      <div class="col col-1"><img src="{{i.license.url}}" width="100px" height="100px"></div>-->
+<!--      <div class="col col-1">{{i.location}}</div>-->
+<!--      <div class="col col-1"><img src="{{i.biodata.url}}"  width="100px" height="100px"></div>-->
+<!--      <div class="col col-1">{{i.phone}}</div>-->
+<!--      <div class="col col-1">{{i.accountnumber}}</div>-->
+<!--      <div class="col col-1">{{i.username}}</div>-->
+<!--      <div class="col col-1">{{i.password}}</div>-->
+<!--      <div class="col col-1"><a href="accept/{{i.id}}">Accept</a><a href="rej/{{i.id}}">Reject</a></div>-->
+<!--    </li>-->
+<!--    {% endfor %}-->
+<!--  </ul>-->
+<!--</div>-->
+
+<div class="container-fluid" style="padding-left:16%;padding-right:8%;">
+  <br><br>
+  <h2>EMPLOYEES REQUEST DETAILS</h2><br>
+    <!-- row -->
+    <div class="row">
+
+        <table class="table table-striped">
+            <tr style=" background-color: rgb(13, 13, 14); color: white;">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Photo</th>
+                <th>License</th>
+                <th>BioData</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Accept</th>
+                <th>Reject</th>
+            </tr>
+            {% for i in data %}
+            {% if i.status == 0 %}
+            <tr>
+<!--                <td>{{i.firstname}}</td>-->
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.location}}</td>
+                <td ><img src="{{i.photo.url}}" style="height: 50px;"></td>
+                <td><img src="{{i.license.url}}"style="height: 60px;"></td>
+                <td><img src="{{i.biodata.url}}"style="height: 60px;"></td>
+                <td>{{i.username}}</td>
+                <td>{{i.password}}</td>
+                <td><button class="btn btn-success"><a href="acp/{{i.pk}}" style="color: green;"> ✔</a></button></td>
+                <td><button class="btn btn-danger"><a href="rej/{{i.id}}" style="color: red;">X</a></button></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+    </div>
+    <!-- /row -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('table').each(function() {
+            var table = $(this);
+            var maxWidths = [];
+            table.find('tr').each(function() {
+                $(this).find('td').each(function(index) {
+                    var contentWidth = $(this).width();
+                    maxWidths[index] = Math.max(maxWidths[index] || 0, contentWidth);
+                });
+            });
+            table.find('tr').each(function() {
+                $(this).find('td').each(function(index) {
+                    $(this).width(maxWidths[index]);
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

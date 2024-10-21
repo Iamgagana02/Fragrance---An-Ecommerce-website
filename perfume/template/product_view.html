@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<!--Custom-Theme-files-->
+<!--theme-style-->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--start-menu-->
+<script src="{% static 'js/rating.js' %}"> </script>
+<script src="{% static 'js/simpleCart.min.js' %}"> </script>
+<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<!--dropdown-->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+	<script src="js/addons/rating.js"></script>
+
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--  Add bootstrap icon Library  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+b{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+
+
+# normal navbar
+
+		.hero{
+    height:8vh;
+    width:100%;
+    background-color:white;
+    background-size:cover;
+    background-position:center;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:2px;
+    padding-left:10%;
+    padding-right:10%;
+}
+.logo{
+    color:#2f3133;
+    font-size:28px;
+}
+
+span{
+    color:black;
+}
+nav ul li {
+    list-style-type:none;
+    display:inline-block;
+    padding:10px 20px;}
+nav ul li a{
+    color:#4d4f52;
+    text-decoration:none;
+
+    font-size:18px;}
+
+nav ul li a:hover{
+    color:black;
+    transition:3s;
+}
+button{
+    border:none;
+    background:#b0b0b0;
+    padding:8px 10px;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+
+    }
+
+	.checked {
+
+	font-size : 20px;color : black;
+}
+.unchecked {
+	font-size : 20px;color :#D8CBAA;
+
+}
+.h{background-color: black;
+color:white;
+
+}
+
+.hr2{
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+background-color:#c2c2a3;
+height:1px;
+}
+
+p{
+font-size:12px;}
+
+.button {
+ padding-left:32%;
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #222;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background:#c29958;
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color:transparent;
+  font-size: 0.9rem;
+  color: black;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #c29958;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+body{margin-top:20px;}
+.footer {
+    background:black;
+	padding-bottom: 50px;
+	padding-top: 80px;
+}
+.footer_menu {
+	margin-bottom: 20px;
+}
+.footer_menu ul {
+	list-style: none;
+	text-align: center;
+}
+.footer_menu ul li{display: inline-block;}
+.footer_menu ul li a {
+	color:#fff;
+	padding: 0 10px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.footer_menu ul li a:hover{color:#554c86;}
+
+/*START FOOTER SOCIAL DESIGN*/
+.footer_profile{margin-bottom:40px;}
+.footer_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+.footer_profile ul li{
+display: inline-block;
+}
+@media only screen and (max-width:480px) {
+.footer_profile ul li{margin:2px;}
+}
+.footer_profile ul li img{width:60px;}
+
+.footer_profile ul li a {
+	background: #c29958;
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 50%;
+	line-height: 40px;
+	box-sizing: border-box;
+	text-decoration: none;
+	-webkit-transition: .3s;
+	transition: .3s;
+	color: #fff;
+}
+.footer_copyright {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+
+.separator {
+  width: calc(100% - 20px);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  color: #8B8E98;
+  margin: 0 10px;
+}
+
+.separator > p {
+  word-break: keep-all;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  margin: auto;
+}
+
+.separator .line {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: #e8e8e8;
+  margin: auto;
+}
+
+.credit-card-info--form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input_container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 15px;
+}
+
+.split input {
+  width: 100%;
+}
+
+.input_label {
+  font-size: 10px;
+  color: #8B8E98;
+  font-weight: 600;
+}
+
+.input_field {
+  width: auto;
+  height: 40px;
+  padding: 0 0 0 16px;
+  border-radius: 9px;
+  outline: none;
+  background-color: #F2F2F2;
+  border: 1px solid #e5e5e500;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 2px #242424;
+  background-color: transparent;
+}
+
+.purchase--btn {
+  height: 55px;
+  background: #F2F2F2;
+  border-radius: 11px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #363636 0%, #1B1B1B 50%, #000000 100%);
+  box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.purchase--btn:hover {
+  box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
+}
+
+/* Reset input number styles */
+.input_field::-webkit-outer-spin-button,
+.input_field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input_field[type=number] {
+  -moz-appearance: textfield;
+}
+.project-info-box p {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d5dadb;
+}
+tr,input,label{
+    font-family: "Barlow", sans-serif !important;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #686c6d;
+    letter-spacing: 0.03rem;
+    margin-bottom: 10px;
+}
+
+.project-info-box {
+  margin: 15px 0;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 5px;
+  height:400px;width:400px;
+}
+
+.project-info-box tr {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d5dadb;
+}
+
+.project-info-box p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+	</style>
+</head>
+<body>
+
+<header>
+	<div class="hero">
+		<nav>
+			<h2 class="logo"><span>FRAGRANCES</span><img src="{% static 'image/icons8-perfume.gif' %} "></h2>
+			<ul>
+				<li><a href="../">HOME</a> </li>
+
+				<li><a href="../men">MEN</a> </li>
+				<li><a href="../women">WOMEN</a> </li>
+				<li><a href="../unisex">UNISEX</a> </li>
+				<li><a href="../contact">DISCOVERY</a> </li>
+<!--				<li><a href="../cart"><img src="{% static 'image/icons8-shopping-bag-50.png' %}" width="25px" height="25px">-->
+
+<!--<li class="nav-item "><a href="../cart"><i class="fa fa-shopping-cart fa-2x"></i>-->
+<!--    							<span class="badge badge-pill badge-danger">{% if d %}{{ d.count }}{% else %}0{% endif %}</span></a></li>			</ul>-->
+<!--			<a href="log"><button type="button">Login </button></a>-->
+			</ul></nav>
+	</div>
+</header><br><br>
+
+
+{% if messages %}
+<div class="container">
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissible messages">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="container-fluid">
+	{% for i in data %}
+
+		<div class="row" style="width:1550px;height:120px;background-color:#c29958;">
+<br>
+<br>
+			<b style="font-size:30px;color:white; font-family: Lucida Console, monospace; padding-left:10%;padding-top:30px;">{{i.name}}<span style="color:white;">...</span></b>
+
+
+
+		</div><br><br>
+
+		<div class="row">
+
+				<div style="padding-left:16%;" class="col-sm-5">
+					<img  src="{{ i.image.url}}" width="500px" height="450px" >
+				</div>
+				<div class="col-sm-1"></div>
+				<div class="col-sm-6" style="overflow: hidden;overflow-y: scroll; height: 500px;padding-right:5%;padding-left:5%;">
+					<br><br>
+					<b style="font-size:40px; font-family: Courier, monospace;">{{i.name}}</b>
+					<br>
+					<br>
+<!--							<h4 style="color:brown;">Spritz , Smell , Repeat</h4><br>-->
+<!--					<br>-->
+<!--					<br>-->
+
+					<!-- rating.js file -->
+					<b style="font-size:20px; font-family: Lucida Console, monospace;color:#c29958;"><span style="color:#c29958;"> MRP </span>{{i.price}}  <span style="background-color:#b0b0b0;border-radius:30px;">save-10%</span></b><br>
+
+					<b style="font-size:15px; font-family: Georgia, Times New Roman, Times, serif;color:#70944A;" >inclusive of all taxes</b><br><br><br>
+
+					<b style="font-size:16px; font-family: Georgia, Times New Roman, Times, serif;color:black;" >BOTTLE SIZE -   </b> <span>				<b style="font-size:20px; font-family: Georgia, Times New Roman, Times, serif;color:red;">{{i.netquantity}} </b>
+	</span><br><br><br>
+
+					{% if datas.quantity > 0 %}
+						{% if i.id in l %}
+							<a href="../cart"> <button class="h"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span style="color:white;font-size:10px;padding-left:5px;padding-right:5px;"> GO TO CART</span ></button></a>
+
+	<!--						<a href="../cart" class="btn btn-success">Go to Cart</a>-->
+						{% else %}
+							<a href="../addcart/{{i.id}}"> <button class="h"><i class="fa fa-cart-plus" aria-hidden="true"></i><span style="color:white;font-size:10px;padding-left:5px;padding-right:5px;"> ADD TO CART</span ></button></a>
+						{% endif %}
+					{% endif %}
+	<!--					{%  if  data in l %}-->
+
+	<!--						<div class="btn-group ">-->
+	<!--							<a href="cart" class="btn btn-success ">Go to Cart</a>-->
+	<!--	&lt;!&ndash;                                <a href="single_booking/{{i.id}}" class="btn btn-success ml-1"> Buy Now</a>&ndash;&gt;-->
+	<!--						</div>-->
+
+	<!--					{% else %}-->
+	<!--						<div class="btn-group">-->
+	<!--							<a href="../addcart/{{i.id}}" class="btn btn-success">Add to Cart</a>-->
+	<!--	&lt;!&ndash;                                <a href="../single_booking/{{i.pk}}" class="btn btn-success ml-1"> Buy Now</a>&ndash;&gt;-->
+	<!--						</div>-->
+	<!--					{% endif %}-->
+	<!--				<a href="../addcart/{{i.id}}"><button class="h"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span style="color:white;font-size:10px;padding-left:5px;padding-right:5px;">  ADD TO BAG</span></button></a>-->
+						{% if i.id in wish %}
+							<a href="../view_wslt"> <button class="h"> <i class="fa fa-heart" aria-hidden="true" style="color: #F38BA0;"></i><span style="color:white;font-size:10px;padding-left:5px;padding-right:5px;">  WISHLISTED</span ></button></a><br><br><br><br>
+
+						{% else %}
+							<a href="../wish/{{i.pk}}"> <button class="h"><i class="fa fa-heart" aria-hidden="true"></i><span style="color:white;font-size:10px;padding-left:5px;padding-right:5px;">  WISHLIST</span ></button></a><br><br><br><br>
+
+						{% endif %}
+
+
+			{% if datas.quantity > 0 %}
+				<form action="../r6/{{i.id}}" method="post">
+					{% csrf_token %}
+						<button class="button">
+
+							<p class="text">Buy Now</p>
+								<span class="icon">
+								  <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+								  </svg>
+								</span>
+							</button>
+
+										  <span>
+										Qty: <input type="number" id="inputBox" name="singleqty" value="1" oninput="multiplyByQty()" max="{{i.quantity}}" min="1" style="width: 40px;">
+
+										 <p style="color:red;" id="maxLimitMessage"></p>
+
+
+										<script>
+										function multiplyByQty() {
+										    var input = int(document.getElementById("inputBox").value);
+											var price = {{i.price}};
+											var result = input * price;
+											document.getElementById("result").value = result;
+											document.getElementById("res1").value = result;
+											document.getElementById("res2").value = result;
+
+											if (input >= {{i.quantity}}) {
+												document.getElementById("maxLimitMessage").innerText = "Maximum quantity is {{i.quantity}}";
+											} else {
+												document.getElementById("maxLimitMessage").innerText = "";
+											}
+										}
+										</script>
+								  </span>
+							<input id="result" name="total_l" value="{{i.price}}" readonly>
+				</form>
+			{% else %}
+					<h5 style="color:red;">Product is unavailable at this moment </h5>
+			{% endif %}
+
+
+	<!--				<div style="padding-left:42%;">Quantity: <select class="lmt" name="sglqty"></select>-->
+	<!--				<script>-->
+	<!--				$(function(){-->
+	<!--					var $select = $(".lmt");-->
+	<!--					for (i=1;i<=10;i++){-->
+	<!--						$select.append($('<option></option>').val(i).html(i))-->
+	<!--					}-->
+	<!--				});-->
+	<!--				</script></div>-->
+	<!--				<div style="padding-left:10%;">-->
+	<!--				  <div class="wrapper">-->
+	<!--					<span class="minus">-</span>-->
+	<!--					<span class="num" value="8">01</span>-->
+	<!--					<span class="plus">+</span>-->
+	<!--				  </div></div>-->
+
+					<br>
+
+					<hr class="hr2" />
+					<b style="font-size:16px; font-family: Georgia, Times New Roman, Times, serif;color:black;">DELIVERY OPTIONS </b><span><i class="fa fa-truck fa-lg " aria-hidden="true"></i></span><br><br>
+					<p>100% Original Products</p>
+					<p>Pay on delivery might be available</p>
+					<p>Easy 14 days returns and exchanges</p><br>
+					<hr class="hr2" />
+					<b style="font-size:16px; font-family: Georgia, Times New Roman, Times, serif;color:black;">PRODUCT DETAILS </b><span><i class="fa fa-file-text fa-lg" aria-hidden="true"></i></span><br><br>
+					<b>Nude Eau De Perfume</b><br><br>
+					<b style="font-size:16px; font-family: Georgia, Times New Roman, Times, serif;color:black;">specifications </b><br><br>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-3">
+								<b>Fragrance</b><br>{{i.fragrance}}<br><hr class="hr2" /><br>
+								<b>Strength</b><br>Medium<br><hr class="hr2" /><br>
+								<b>Type</b><br>Perfume<br><hr class="hr2" /><br>
+
+							</div>
+							<div class="col-sm-1"></div>
+							<div class="col-sm-2">
+								<b>Preference</b><br> Dermatologically Tested <br><hr class="hr2" /><br>
+								<b>Sustainable</b><br>Regular<br><hr class="hr2" /><br>
+							</div>
+						</div>
+					</div>
+					<b style="font-size:16px; font-family: Georgia, Times New Roman, Times, serif;color:black;">Ingredients </b><br>
+					<b>{{i.ingredients}}</b>
+
+				</div>
+		{% endfor %}
+    </div>
+</div>
+
+
+
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<div class="footer">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-lg-12 col-sm-12 col-xs-12">
+				<div class="footer_menu">
+					<ul>
+						<li><a href="../">Home</a></li>
+						<li><a href="../women">women</a></li>
+						<li><a href="../men">men</a></li>
+						<li><a href="../unisex">Unisex</a></li>
+						<li><a href="../contact">Discovery</a></li>
+					</ul>
+				</div>
+				<div class="footer_copyright">
+					<p>© 2021 Sai. All Rights Reserved.</p>
+				</div>
+				<div class="footer_profile">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+					</ul>
+				</div>
+			</div><!--- END COL -->
+		</div><!--- END ROW -->
+	</div><!--- END CONTAINER -->
+</div>
+
+
+<script>
+    $(document).ready(function() {
+  const minus = $('.quantity__minus');
+  const plus = $('.quantity__plus');
+  const input = $('.quantity__input');
+  minus.click(function(e) {
+    e.preventDefault();
+    var value = input.val();
+    if (value > 1) {
+      value--;
+    }
+    input.val(value);
+  });
+
+  plus.click(function(e) {
+    e.preventDefault();
+    var value = input.val();
+    value++;
+    input.val(value);
+  })
+});
+</script>
+</body>
+</html>

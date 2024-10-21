@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<link href="{% static 'css/bootstrap.css' %}"  rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
+<script src="{% static 'js/jquery-1.11.0.min.js' %}" ></script>
+<!--Custom-Theme-files-->
+<!--theme-style-->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--start-menu-->
+<script src="{% static 'js/simpleCart.min.js' %}"> </script>
+<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<!--dropdown-->
+<script src="{% static 'js/jquery.easydropdown.js' %}" ></script>
+	<style>
+		.hero{
+    height:18vh;
+    width:100%;
+    background-color:white;
+    background-size:cover;
+    background-position:center;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:40px;
+    padding-left:10%;
+    padding-right:10%;
+}
+.logo{
+    color:#2f3133;
+    font-size:28px;
+}
+span{
+    color:black;
+}
+nav ul li {
+    list-style-type:none;
+    display:inline-block;
+    padding:10px 20px;}
+nav ul li a{
+    color:#4d4f52;
+    text-decoration:none;
+
+    font-size:18px;}
+
+nav ul li a:hover{
+    color:black;
+    transition:3s;
+}
+
+button{
+    border:none;
+    background:black;
+    padding:12px 30px;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    transition:.4s;}
+
+button:hover{
+    transform:scale(1.3);
+    cursor:pointer;}
+	</style>
+</head>
+<body>
+
+<header>
+	<div class="hero">
+		<nav>
+			<h2 class="logo"><span>FRAGRANCES</span><img src="{% static 'image/icons8-perfume.gif' %} "></h2>
+			<ul>
+				<li><a href="women">WOMENS</a> </li>
+				<li><a href="men">MENS</a> </li>
+				<li><a href="#">SALE</a> </li>
+				<li><a href="#">SERVICE</a> </li>
+				<li><a href="contact">CONTACT US</a> </li>
+				<li><a href="#"><img src="{% static 'image/icons8-shopping-bag-50.png' %} "></a> </li>
+			</ul>
+			<a href="log"><button type="button">Login </button></a>
+		</nav>
+	</div>
+</header>
+
+<div></div>
+
+</body>
+</html>

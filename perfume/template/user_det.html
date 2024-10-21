@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #996633;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+
+    }
+    li {
+      display: block;
+    }
+    .col {
+
+      flex-basis: 100%;
+
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+		<p><h2 style="  position: absolute;top: 30px;font-size: 36px;color: #818181;margin-left: 50px;">Admin</h2></p>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br><br><br>
+  <a href="s">Products</a>
+  <a href="use">User details</a>
+  <a href="../dv">Customers</a>
+  <a href="../joi">Employee</a>
+
+<!--  <a href="#">Payments</a>-->
+<!--  <a href="joi">Employee</a>-->
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<div class="container-fluid" style="padding-left:14%;padding-right:10%;">
+  <br><br>
+  <h2>REGISTER DETAILS</h2>
+  <br><br>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-2">Name</div>
+      <div class="col col-2">E-mail</div>
+      <div class="col col-3">User Name</div>
+      <div class="col col-1">Password</div>
+    </li>
+    {% for i in data %}
+    <li class="table-row">
+      <div class="col col-2" data-label="Job Id">{{i.name}}</div>
+      <div class="col col-2" data-label="Customer Name">{{i.email}}</div>
+      <div class="col col-3" data-label="Amount">{{i.username}}</div>
+      <div class="col col-1" data-label="Payment Status">{{i.password}}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+</body>
+</html>

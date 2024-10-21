@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%load static%}
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1.0">
+	<title>Bootstrap5 Sidebar</title>
+	<link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity=
+"sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+		crossorigin="anonymous">
+	<link rel="stylesheet"
+		href="style.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity=
+"sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer" />
+    <style>html, body {
+	height: 100%;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.gfg {
+
+	width: 50px;
+
+}
+
+.mynav {
+	color: #FDEFF4;
+}
+
+.mynav li a {
+	color: #FDEFF4;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	border-radius: 5px;
+	padding: 8px 5px;
+}
+
+.mynav li a.active {
+	background: #FDEFF4;
+}
+
+.mynav li a:hover {
+	background: black;
+}
+
+.mynav li a i {
+	width: 25px;
+	text-align: center;
+}
+
+.notification-badge {
+	background-color: #FDEFF4;
+	float: right;
+	color: #FDEFF4;
+	font-size: 14px;
+	padding: 0px 8px;
+	border-radius: 2px;
+}
+.but{
+    border:none;
+    width:230px;
+    background:black;
+    padding:10px 50px;
+
+    border-radius:2px;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    transition:.4s;}
+button{
+    border:none;
+    background:black;
+    padding:12px 30px;
+    border-radius:7px;
+    color:white;
+    font-weight:bold;
+    font-size:10px;
+    transition:.4s;}
+
+.button1{
+    border:none;
+    background:#d5cdb7;
+    padding:12px 30px;
+    border-radius:7px;
+    color:black;
+    font-weight:bold;
+    font-size:10px;
+    transition:.4s;}
+
+button:hover{
+    transform:scale(1);
+    cursor:pointer;}
+h{
+	padding-top:6px}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+		<p><h2 style="  position: absolute;top: 30px;font-size: 36px;color: #818181;margin-left: 50px;">Admin</h2></p>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br><br><br>
+  <a href="s">Products</a>
+  <a href="use">User details</a>
+  <a href="../cus">Customers</a>
+<!--  <a href="#">Payments</a>-->
+<!--  <a href="joi">Employee</a>-->
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+	<center><h3>ORDER STATUS UPDATION</h3></center>
+
+<!--<form action="../status/{i.id}" method="post">-->
+	<table class="table table-hover" style="position:absolute;left:280px;width:1200px;">
+	  <thead>
+		<tr>
+		  <th scope="col">BOOKING-ID</th>
+		  <th scope="col">USERNAME</th>
+		  <th scope="col">DELIVERY_DETAILS</th>
+		  <th scope="col">ITEMS</th>
+		  <th scope="col">QUANTITY</th>
+		  <th scope="col">PAYMENT-MODE</th>
+		  <th scope="col">TOTAL</th>
+
+		 <th scope="col">STATUS_UPDATION</th>
+
+		</tr>
+	  </thead>
+	  <tbody>
+	  {% for i in data %}
+
+		<tr>
+		  <td>{{ i.order.tracking_no}}</td>
+	<!--	  <td><img style="height:100px;width:100px;" src="{{ i.image.url}}" alt=""></td>-->
+		  <td>{{ i.order.user.name }}</td>
+		  <td>{{ i.order.saddress }},{{ i.order.sstate }},{{ i.order.sdistrict }},{{i.order.spincode}}</td>
+	<!--	  <td>{{ i.category }}</td>-->
+
+		<td>
+			{% for j in i.order_items %}
+				<a href="#" class="text-body"> : {{ j.product.name }}</a><br>
+			{% endfor %}
+		</td>
+
+			<td>{{ i.order.quant}}</td>
+			<td>{{ i.order.payment_mode }}</td>
+			<td>{{ i.order.tprice }}</td>
+	<!--	  <td>{{ i.ingredients }}</td>-->
+
+			<td>
+<form method="POST" action="../status/{{i.order.id}}">
+    {% csrf_token %}
+			<select  name="order_status"
+                      class="custom-select tm-select-accounts"
+					  style="width:140px;">
+
+                      <option value="Pending"> Pending</option>
+                      <option value="Shipped"> Shipped</option>
+                      <option value="Out for Delivery"> Out for Delivery</option>
+                      <option value="Delivered">Delivered</option>
+                      <option value="Cancelled">Cancelled</option>
+
+
+                    </select>
+			<input style="width:120px;" value="{{i.order.status}}" disabled >
+    <button type="submit">Update</button>
+</form>
+
+
+			</td>
+			<td></td>
+
+			  <br>
+	<!--		  <a href="delete/{{i.id}}"><button class="button1" type="submit">Delete</button> </a></td>-->
+	<!--	  <td></td>-->
+		</tr>
+
+	{% endfor %}
+	  </tbody>
+<!--</form>-->
+</table>
+
+		</div>
+	</div>
+
+</body>
+</html>
